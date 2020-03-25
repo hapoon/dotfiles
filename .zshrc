@@ -15,8 +15,28 @@ find_cd() {
   cd "$(find . -type d | peco)"
 }
 
+# Google Search by Google Chrome
+google() {
+  local str opt
+  if [ $# != 0 ]; then
+    for i in $*; do
+      str="$str${str:++}$i"
+    done
+    opt='search?num=100'
+    opt="${opt}&q=${str}"
+  fi
+  open -a Google\ Chrome http://www.google.co.jp/$opt
+}
+
 autoload -U compinit
 compinit -u
+
+PROMPT="%/%% "
+PROMPT2="%_%% "
+SPROMPT="%r is correct? [n,y,a,e]:] "
+
+setopt auto_cd
+setopt correct
 
 # alias setting
 alias ls='ls -G'
@@ -41,3 +61,6 @@ alias -g X='| xargs'
 
 alias -s gz='tar -xzvf'
 alias -s html='open'
+
+
+function chpwd() { ls -ltr }
