@@ -31,6 +31,12 @@ google() {
 autoload -U compinit
 compinit -u
 
+# anyenv
+eval "$(anyenv init -)"
+
+# goenv
+#eval "$(goenv init -)"
+
 PROMPT="%/%% "
 PROMPT2="%_%% "
 SPROMPT="%r is correct? [n,y,a,e]:] "

@@ -12,5 +12,10 @@ endif
 call plug#begin()
 Plug 'stephpy/vim-yaml'
 Plug 'plasticboy/vim-markdown'
+Plug 'dart-lang/dart-vim-plugin'
+Plug 'natebosch/vim-lsc'
+Plug 'natebosch/vim-lsc-dart'
 call plug#end()
 
+" Use all the defaults (recommended):
+let g:lsc_auto_map = v:true
