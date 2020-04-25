@@ -35,7 +35,7 @@ compinit -u
 eval "$(anyenv init -)"
 
 # goenv
-#eval "$(goenv init -)"
+export PATH="$PATH":"$GOPATH/bin"
 
 PROMPT="%/%% "
 PROMPT2="%_%% "
