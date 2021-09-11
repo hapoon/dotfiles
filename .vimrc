@@ -1,3 +1,8 @@
+let NERDTreeShowBookmarks=1 " 起動時にブックマークを表示
+autocmd VimEnter * NERDTree " vim起動時にNERDTreeを開く
+" NERDTreeのウィンドウしか開かれてない時は自動的に閉じる
+autocmd bufenter * if (winnr("$") == 1 && exists("b:NERDTree") && b:NERDTree.isTabTree()) | q | endif
+
 let g:terraform_align=1
 let g:terraform_fold_sections=1
 let g:terraform_fmt_on_save=1
@@ -19,3 +24,15 @@ call plug#end()
 
 " Use all the defaults (recommended):
 let g:lsc_auto_map = v:true
+
+packloadall
+silent! helptags ALL
+
+noremap <c-h> <c-w><c-h>
+noremap <c-j> <c-w><c-j>
+noremap <c-k> <c-w><c-k>
+noremap <c-l> <c-w><c-l>
+
+set foldmethod=indent
+set wildmenu
+set hlsearch
