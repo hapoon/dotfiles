@@ -1,4 +1,4 @@
-let mapleader='\<space>'
+let mapleader=','
 let NERDTreeShowBookmarks=1 " 起動時にブックマークを表示
 autocmd VimEnter * NERDTree " vim起動時にNERDTreeを開く
 " NERDTreeのウィンドウしか開かれてない時は自動的に閉じる
