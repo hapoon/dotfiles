@@ -1,3 +1,4 @@
+let mapleader='\<space>'
 let NERDTreeShowBookmarks=1 " 起動時にブックマークを表示
 autocmd VimEnter * NERDTree " vim起動時にNERDTreeを開く
 " NERDTreeのウィンドウしか開かれてない時は自動的に閉じる
@@ -28,10 +29,17 @@ let g:lsc_auto_map = v:true
 packloadall
 silent! helptags ALL
 
+" general remapping
 noremap <c-h> <c-w><c-h>
 noremap <c-j> <c-w><c-j>
 noremap <c-k> <c-w><c-k>
 noremap <c-l> <c-w><c-l>
+" insert mode remapping
+inoremap ' ''<esc>i
+inoremap " ""<esc>i
+inoremap { {}<esc>i
+inoremap ( ()<esc>i
+inoremap [ []<esc>i
 
 set foldmethod=indent
 set wildmenu
