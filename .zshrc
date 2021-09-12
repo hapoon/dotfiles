@@ -1,3 +1,6 @@
+# Editor
+export EDITOR=vi
+
 # direnv Setup [https://direnv.net/docs/hook.html]
 eval "$(direnv hook zsh)"
 
@@ -32,6 +35,9 @@ export PATH="$PATH":"$GOPATH/bin"
 PROMPT="%{${fg[blue]}%}[%~]%{${reset_color}%}%% "
 PROMPT2="%_%% "
 SPROMPT="%r is correct? [n,y,a,e]:] "
+
+# ls color
+export LSCOLORS=gxfxcxdxbxegedabagacad
 
 setopt auto_cd
 setopt correct
