@@ -54,7 +54,7 @@ precmd () { vcs_info }
 RPROMPT='${vcs_info_msg_0_}'
 
 # alias setting
-alias ls='ls -G'
+alias ls='ls -Grt'
 alias ll='ls -l'
 alias relogin='exec $SHELL -l'
 alias fcd='find_cd'
