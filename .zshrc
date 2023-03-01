@@ -65,7 +65,7 @@ alias ..2='cd ../..'
 alias ..3='cd ../../..'
 alias topmem='top -o rsize'
 alias topcpu='top -o cpu'
-
+alias k=kubectl
 alias -g A='| awk'
 alias -g C='| wc -l'
 alias -g G='| grep --color=auto'
