@@ -30,13 +30,14 @@ Plug 'hashivim/vim-terraform'
 Plug 'tpope/vim-vinegar'
 Plug 'kien/ctrlp.vim'
 Plug 'fatih/vim-go', {'do': ':GoUpdateBinaries'}
+Plug 'neoclide/coc.nvim', {'branch': 'release'}
 call plug#end()
 
 " nerdtree settings
 let mapleader=','
 let NERDTreeShowBookmarks=1 " 起動時にブックマークを表示
 let NERDTreeShowHidden=1 " 隠しファイルを表示"
-autocmd VimEnter * NERDTree " vim起動時にNERDTreeを開く
+" autocmd VimEnter * NERDTree " vim起動時にNERDTreeを開く
 " NERDTreeのウィンドウしか開かれてない時は自動的に閉じる
 autocmd bufenter * if (winnr("$") == 1 && exists("b:NERDTree") && b:NERDTree.isTabTree()) | q | endif
 
