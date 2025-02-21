@@ -57,8 +57,8 @@ precmd () { vcs_info }
 RPROMPT='${vcs_info_msg_0_}'
 
 # alias setting
-alias ls='ls -Grt'
-alias ll='ls -l'
+alias ls='eza -Grt changed'
+alias ll='eza -l -r -t changed'
 alias relogin='exec $SHELL -l'
 alias fcd='find_cd'
 alias ..='cd ..'
@@ -82,4 +82,4 @@ alias -s gz='tar -xzvf'
 alias -s html='open'
 
 
-function chpwd() { ls -ltr }
+function chpwd() { ll }
