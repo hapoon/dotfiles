@@ -34,6 +34,9 @@ eval "$(anyenv init -)"
 # goenv
 export PATH="$PATH":"$GOPATH/bin"
 
+# rbenv
+export PATH="$HOME/.rbenv/bin":"$PATH"
+
 # prompt
 PROMPT="%{${fg[blue]}%}[%~]%{${reset_color}%}%% "
 PROMPT2="%_%% "
@@ -83,3 +86,9 @@ alias -s html='open'
 
 
 function chpwd() { ll }
+# Java
+export PATH="/opt/homebrew/opt/openjdk/bin:$PATH"
+export PATH="$HOME/.jenv/bin:$PATH"
+eval "$(jenv init -)"
+export JAVA_HOME=/opt/homebrew/opt/openjdk/bin
+export PATH="/opt/homebrew/opt/postgresql@17/bin:$PATH"
